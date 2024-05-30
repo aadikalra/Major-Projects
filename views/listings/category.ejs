@@ -1,0 +1,35 @@
+<% layout('/layouts/boilerplate') -%>
+<!-- <% layout('/includes/sub_navbar.ejs') -%> -->
+<link rel="stylesheet" href="/public/css/style.css">
+<div class="mt-3" style="padding: 80px; padding-top: 0px">
+  <div class="row row-cols-lg-5 row-cols-md-3 row-cols-sm-1 row-cols-xs-1">
+    <% for(let listing of allListings) { %>
+    <% if (listing.category.includes(CategoryURL)) { %>
+    <a href="/listings/<%= listing._id %>" class="listing-link">
+      <div class="card col">
+        <img src="<%= listing.image.url %>" class="card-img-top" alt="listing_image" style="height: 20rem" />
+        <div class="card-body">
+          <% if (listing.price) { %>
+          <p class="card-text">
+            <b>
+              <%= listing.title %> -
+              <span class="countries" style="display: inline">
+                <%= listing.country %>
+              </span>
+            </b>
+            <br /><span class="price" data-currency="USD">$ <%= listing.price.toLocaleString() %></span>
+            / night
+            <br><b style="color: black;"><%= listing.category %></b>
+          </p>
+          <% } else { %>
+          <p class="card-text">
+            <b><%= listing.title %></b><br />Price unavailable
+          </p>
+          <% } %>
+        </div>
+      </div>
+    </a>
+    <% } %>
+    <% } %>
+  </div>
+</div>

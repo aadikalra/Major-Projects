@@ -1,0 +1,154 @@
+<% layout('/layouts/boilerplate') -%>
+<div class="row">
+  <div class="col-8 offset-2">
+    <h3 class="mt-3">Create a New Listing</h3>
+    <form method="POST" novalidate action="/listings" enctype="multipart/form-data" class="needs-validation" id="categoryForm" onchange="change()">
+      <!-- Title -->
+      <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input name="listing[title]" placeholder="Add a catchy title" type="text" class="form-control" required="true" />
+        <div class="valid-feedback">Title looks good</div>
+        <div class="invalid-feedback">Please enter a valid title.</div>
+      </div>
+
+      <!-- Description -->
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea name="listing[description]" class="form-control" required="true"></textarea>
+        <div class="invalid-feedback">
+          Please enter a valid description.
+        </div>
+      </div>
+
+      <!-- Image -->
+      <div class="mb-3">
+        <div>
+          <label for="imageUrl" class="form-label">Upload Listing Image</label>
+          <input name="listing[image]" type="file" class="form-control" required="true" />
+        </div>
+      </div>
+
+      <div class="row">
+        <!-- Price -->
+        <div class="mb-3 col-md-4">
+          <label for="validationCustomPrice" class="form-label">Price</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text" id="inputGroupPrepend" onclick="toggleCurrency()">$</span>
+            <input type="number" class="form-control" placeholder="1200" min="0" id="validationCustomPrice" aria-describedby="inputGroupPrepend" name="listing[price]" required />
+            <div class="invalid-feedback">Please enter a valid price.</div>
+          </div>
+        </div>
+
+        <!-- Country -->
+        <div class="mb-3 col-md-8">
+          <label for="country" class="form-label">Country</label>
+          <input name="listing[country]" placeholder="USA" type="text" class="form-control" required="true" />
+          <div class="invalid-feedback">Please enter a valid country.</div>
+        </div>
+      </div>
+
+      <!-- Location -->
+      <div class="mb-3">
+        <label for="location" class="form-label">Location</label>
+        <input name="listing[location]" placeholder="Sacremento, CA" type="text" class="form-control" required="true" />
+        <div class="invalid-feedback">Please enter a valid location.</div>
+      </div>
+      <!-- Categories -->
+      <div class="grid-container">
+        <div style="margin-left: 48px; margin-right: 80px" class="c14whb16 atm_8w_je46wd atm_90_wqqh0j atm_93_16tozh0 atm_9s_11p5wf0 atm_d5_1bp4okc atm_d3_8n3s54 atm_cx_dfedth atm_e0_1fe5oxz atm_dy_kim48s atm_fc_1y6m0gg atm_gi_idpfg4 atm_j6_mtsehg atm_e2_1kjme8w atm_ks_ndwtr5 atm_l4_1f51e7f atm_ld_5ul63a atm_lc_djs5a5 atm_lj_wg387a atm_li_1y0adu4 atm_o3_1p5gfer atm_p9_glywfm atm_tl_19lnvtn atm_or_dhnz5w__ta18iu atm_9s_glywfm_14pyf7n atm_oa_2geptf_bqoj1z atm_oq_1vwytc5_bqoj1z dir dir-ltr">
+          <% for (let category of categoryData) { %>
+          <div class="checkbox-wrapper-16">
+            <label class="checkbox-wrapper" for="<%= category.name %>">
+              <input type="checkbox" class="checkbox-input" id="<%= category.name %>" class="category-checkbox" data-name="<%= category.name %>" />
+              <span class="checkbox-tile">
+                <div class="c1abgzgs atm_9s_1txwivl atm_ar_vrvcex dir dir-ltr" data-testid="category-item--Beachfront--unchecked">
+                  <span class="c1ozl2w2 atm_9s_1txwivl atm_ar_1bp4okc atm_h_1h6ojuz atm_jb_1sx8fo5 atm_cx_evh4rp atm_cx_1yuitx__oggzyc dir dir-ltr">
+                    <img class="i181yxiv atm_j3_1osqo2v atm_vy_1o8jidz atm_e2_1wugsn5 atm_d2_2ec48i atm_fg_1h6ojuz atm_k4_1d1puqj atm_uc_15ib22x atm_ui_idpfg4__1rrf6b5 dir dir-ltr" src="<%= category.image.url %>" alt="supposed to work??" width="24" height="24" />
+                    <div class="t192ua0c atm_d2_1cy2u2k atm_fg_1h6ojuz atm_vv_1q9ccgz atm_mk_h2mmj6 atm_mk_stnw88_9in345 atm_92_1yyfdc7_9in345 atm_f7_idpfg4_9in345 atm_e2_yh40bf_9in345 atm_tk_1yzjdlj_9in345 atm_k4_idpfg4_9in345 atm_uc_1wre3yg_9in345 atm_uc_glywfm_9in345_1rrf6b5 dir dir-ltr">
+                    </div>
+                  </span>
+                </div>
+                <span class="checkbox-label">
+                  <%= category.name %>
+                </span>
+              </span>
+            </label>
+          </div>
+          <% } %>
+        </div>
+      </div>
+
+      <!-- Category -->
+      <div class="mb-3">
+        <label for="location" class="form-label">Category</label>
+        <input name="listing[category]" placeholder="Categories go here" type="text" class="form-control" required="true" id="selectedCategories" />
+        <div class="invalid-feedback">Please enter a valid Category.</div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-12">
+          <button id="submitButton" class="btn btn-dark add-button" type="submit">
+            Add
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<br>
+<script>
+  let isRupees = false;
+
+  function toggleCurrency() {
+    const priceInput = document.getElementById("validationCustomPrice");
+    if (isRupees) {
+      priceInput.value = convertToDollars(priceInput.value);
+      document.getElementById("inputGroupPrepend").textContent = "$";
+    } else {
+      priceInput.value = convertToRupees(priceInput.value);
+      document.getElementById("inputGroupPrepend").textContent = "₹";
+    }
+    isRupees = !isRupees;
+  }
+
+  function convertToRupees(value) {
+    value = value * 83.5466666667;
+    return value.toFixed(2); // Round to 2 decimal places
+  }
+
+  function convertToDollars(value) {
+    value = value / 83.5466666667;
+    return value.toFixed(2); // Round to 2 decimal places
+  }
+
+  (() => {
+    "use strict";
+
+    const forms = document.querySelectorAll(".needs-validation");
+    Array.from(forms).forEach((form) => {
+      form.addEventListener(
+        "submit",
+        (event) => {
+          if (!form.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+
+          form.classList.add("was-validated");
+        },
+        false,
+      );
+    });
+  })();
+
+  const categoryForm = document.getElementById("categoryForm");
+  const selectedCategoriesInput =
+    document.getElementById("selectedCategories");
+
+  const change = () => {
+    const checkedCategories = Array.from(categoryForm.querySelectorAll('.checkbox-input:checked'))
+      .map((checkbox) => checkbox.dataset.name);
+    selectedCategoriesInput.value = checkedCategories.join(', ');
+  };
+</script>

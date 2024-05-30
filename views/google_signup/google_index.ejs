@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Express • TodoMVC</title>
+		<link rel="stylesheet" href="/css/base.css">
+		<link rel="stylesheet" href="/css/index.css">
+		<link rel="stylesheet" href="/css/app.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	</head>
+	<body>
+		<section class="todoapp">
+			<nav class="nav">
+				<span class="material-symbols-outlined profile" style="background-color: #e6e6e6 !important; border-radius: 50% !important;">account_circle</span>
+				<div style="
+				background-color: #e6e6e6;
+				width: 160px;
+				height: 190px;
+				border-radius: 20px;
+				box-shadow: 0px 0px 20px 11px #0000001c;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				position: absolute;
+				top: 31px;
+				right: 10px;
+				display: none;
+				" class="disappear">
+					<p class="user" style="font-weight: 400;"><%= user.name || user.username || user.email %></p>
+					<form action="/logout" method="post">
+						<button class="logout" type="submit">Sign out</button>
+					</form>
+				</div>
+			</nav>
+			<header class="header">
+				<h1>todos</h1>
+				<form action="/" method="post">
+					<input class="new-todo" name="title" placeholder="What needs to be done?" autofocus>
+					<% if (filter) { %>
+					<input type="hidden" name="filter" value="<%= filter %>"/>
+					<% } %>
+				</form>
+			</header>
+			<% if (activeCount + completedCount > 0) { %>
+			<section class="main">
+				<form action="/toggle-all" method="post">
+					<input id="toggle-all" class="toggle-all" type="checkbox" name="completed" <%- activeCount == 0 ? 'checked' : '' %> onchange="this.form.submit();">
+					<label for="toggle-all">Mark all as complete</label>
+				</form>
+				<ul class="todo-list">
+					<% todos.forEach(function(todo) { %>
+					<li <%- todo.completed ? 'class="completed"' : '' %>>
+						<form action="<%= todo.url %>" method="post">
+							<div class="view">
+								<input class="toggle" type="checkbox" name="completed" <%- todo.completed ? 'checked' : '' %> onchange="this.form.submit();">
+								<label ondblclick="this.closest('li').className = this.closest('li').className + ' editing'; this.closest('li').querySelector('input.edit').focus(); this.closest('li').querySelector('input.edit').value = ''; this.closest('li').querySelector('input.edit').value = '<%= todo.title %>';"><%= todo.title %></label>
+								<button class="destroy" form="delete-<%= todo.id %>"></button>
+							</div>
+							<input class="edit" name="title" value="<%= todo.title %>" onkeyup="if (event.keyCode == 27) { this.setAttribute('data-esc', ''); this.closest('li').className = this.closest('li').className.replace('editing', ''); }" onblur="if (this.getAttribute('data-esc') !== null) { return this.removeAttribute('data-esc'); } this.form.submit();">
+							<% if (filter) { %>
+							<input type="hidden" name="filter" value="<%= filter %>"/>
+							<% } %>
+						</form>
+						<form id="delete-<%= todo.id %>" action="<%= todo.url %>/delete" method="post">
+							<% if (filter) { %>
+							<input type="hidden" name="filter" value="<%= filter %>"/>
+							<% } %>
+						</form>
+					</li>
+					<% }); %>
+				</ul>
+			</section>
+			<% } %>
+			<% if (activeCount + completedCount > 0) { %>
+			<footer class="footer">
+				<span class="todo-count"><strong><%= activeCount %></strong> <%= pluralize('item', activeCount) %> left</span>
+				<ul class="filters">
+					<li>
+						<a <%- !filter ? 'class="selected"' : '' %> href="/">All</a>
+					</li>
+					<li>
+						<a <%- filter == 'active' ? 'class="selected"' : '' %> href="/active">Active</a>
+					</li>
+					<li>
+						<a <%- filter == 'completed' ? 'class="selected"' : '' %> href="/completed">Completed</a>
+					</li>
+				</ul>
+				<% if (completedCount > 0) { %>
+				<form action="/clear-completed" method="post">
+					<button class="clear-completed">Clear completed</button>
+					<% if (filter) { %>
+					<input type="hidden" name="filter" value="<%= filter %>"/>
+					<% } %>
+				</form>
+				<% } %>
+			</footer>
+			<% } %>
+		</section>
+		<footer class="info">
+			<p>Double-click to edit a todo</p>
+			<p>Created by Aadi Kalra</p>
+			<p>Part of <b>Voer</b></p>
+		</footer>
+	</body>
+</html>
+
+<style>
+	.material-symbols-outlined {
+	  font-variation-settings:
+	  'FILL' 0,
+	  'wght' 400,
+	  'GRAD' 0,
+	  'opsz' 26
+	}
+
+	.profile {
+		background-color: #e6e6e6 !important;
+		border-radius: 50% !important;
+		transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+	}
+
+	.profile:hover {
+		background-color: red !important;
+		cursor: pointer;
+		border-radius: 50% !important;
+	}
+
+	.nav {
+		position: absolute;
+		top: -124px;
+		right: -34vw;
+	}
+</style>
+<script>
+    const profileSpan = document.querySelector('.profile');
+    const disappearDiv = document.querySelector('.disappear');
+
+    profileSpan.addEventListener('click', () => {
+      if (disappearDiv.style.display === 'none') {
+        disappearDiv.style.display = 'flex';
+      } else {
+        disappearDiv.style.display = 'none';
+      }
+    });
+  </script>
