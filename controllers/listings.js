@@ -18,13 +18,13 @@ module.exports.index = async (req, res) => {
   // ])
 
   const allListings = await Listing.find({}).sort(sortQuery)
-  res.render('listings/index.ejs', {
+  console.log(req.user);
+  res.render('listings/index', {
     allListings,
     sortOption,
     categoryData,
-    // averageRating: averageRating[0].averageRating,
-    user: req.user // This should now include profile_picture
-  })
+    user: req.user // Pass user to the template
+  });
 
   console.log(req.user)
 }
