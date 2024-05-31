@@ -52,14 +52,14 @@ module.exports.showListing = wrapAsync(async (req, res) => {
       .populate({ path: 'reviews', populate: { path: 'author' } })
       .populate('owner')
 
-    // const averageRating = await Review.aggregate([
-    //   {
-    //     $group: {
-    //       _id: null,
-    //       averageRating: { $avg: '$rating' }
-    //     }
-    //   }
-    // ])
+    const averageRating = await Review.aggregate([
+      {
+        $group: {
+          _id: null,
+          averageRating: { $avg: '$rating' }
+        }
+      }
+    ])
 
     if (!listing) {
       req.flash(
@@ -68,9 +68,10 @@ module.exports.showListing = wrapAsync(async (req, res) => {
       )
       return res.redirect('/listings')
     } else {
+      console.log(averageRating);
       res.render(
         'listings/show.ejs',
-        { listing }
+        { listing, averageRating: { $avg: '$rating' }, categoryData, user: req.user }
       )
     }
   } catch (err) {
