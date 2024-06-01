@@ -50,6 +50,9 @@ router.get('/new', isLoggedIn, listingController.renderNewForm)
 // Edit Route
 router.get('/:id/edit', isLoggedIn, wrapAsync(listingController.renderEditForm))
 
+// Reserve Route
+router.get('/:id/reserve', isLoggedIn, wrapAsync(listingController.reserveListing))
+
 // Delete, Show, & Put Route
 router
   .route('/:id')

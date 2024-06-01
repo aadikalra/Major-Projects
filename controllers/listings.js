@@ -144,3 +144,9 @@ module.exports.destroyListing = async (req, res) => {
   console.log(deletedListing)
   res.redirect('/listings')
 }
+
+module.exports.reserveListing = async (req, res) => {
+  let { id } = req.params
+  const listing = await Listing.findById(id)
+  res.render('listings/reserve', { listing, categoryData })
+}

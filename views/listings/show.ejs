@@ -1,6 +1,4 @@
 <% layout('/layouts/boilerplate') -%>
-<link rel="stylesheet" href="https://a0.muscache.com/airbnb
-/static/packages/web/common/frontend/core-guest-loop/apps/core-guest-spa/client.2ed34167fd.css" type="text/css" crossorigin="anonymous" media="all" />
     <link rel="stylesheet" href="/public/css/style.css" />
     <div class="cgx2eil atm_mk_h2mmj6 dir dir-ltr">
         <div class="_88xxct">
@@ -25,7 +23,7 @@
                                                     </h1>
                                                 </span>
                                                 <!-- <div class="_1jdtwz4"> -->
-                                                <span style="margin-left: 54vw;">
+                                                <span style="margin-left: 48.739vw;">
                                                     <button type="button"
                                                         class="l1ovpqvx atm_1he2i46_1k8pnbi_10saat9 atm_yxpdqi_1pv6nv4_10saat9 atm_1a0hdzc_w1h1e8_10saat9 atm_ywwsz3_1afjdsa_10saat9 atm_1lnvhrj_zhgkwc_10saat9 atm_8i46q5_63ecz1_10saat9 b85v83j atm_9j_tlke0l atm_9s_1o8liyq atm_gi_idpfg4 atm_mk_h2mmj6 atm_r3_1h6ojuz atm_70_5j5alw atm_vy_1wugsn5 atm_tl_1gw4zv3 atm_9j_13gfvf7_1o5j5ji c1xklw0o atm_bx_48h72j atm_cs_9dzvea atm_5j_t09oo2 atm_kd_glywfm atm_uc_1lizyuv atm_r2_1j28jx2 atm_c8_km0zk7 atm_g3_18khvle atm_fr_1m9t47k atm_jb_1yg2gu8 atm_3f_glywfm atm_26_1j28jx2 atm_7l_jt7fhx atm_rd_8stvzk atm_9xn0br_1wugsn5 atm_9tnf0v_1wugsn5 atm_7o60g0_1wugsn5 atm_gz_1bs0ed2 atm_h0_1bs0ed2 atm_l8_ftgil2 atm_uc_glywfm__1rrf6b5 atm_kd_glywfm_1w3cfyq atm_uc_aaiy6o_1w3cfyq atm_3f_glywfm_e4a3ld atm_l8_idpfg4_e4a3ld atm_gi_idpfg4_e4a3ld atm_3f_glywfm_1r4qscq atm_kd_glywfm_6y7yyg atm_uc_glywfm_1w3cfyq_1rrf6b5 atm_kd_glywfm_pfnrn2_1oszvuo atm_uc_aaiy6o_pfnrn2_1oszvuo atm_3f_glywfm_1icshfk_1oszvuo atm_l8_idpfg4_1icshfk_1oszvuo atm_gi_idpfg4_1icshfk_1oszvuo atm_3f_glywfm_b5gff8_1oszvuo atm_kd_glywfm_2by9w9_1oszvuo atm_uc_glywfm_pfnrn2_1o31aam atm_tr_18md41p_csw3t1 atm_k4_kb7nvz_1o5j5ji atm_3f_glywfm_1w3cfyq atm_26_zbnr2t_1w3cfyq atm_7l_jt7fhx_1w3cfyq atm_70_18bflhl_1w3cfyq atm_3f_glywfm_pfnrn2_1oszvuo atm_26_zbnr2t_pfnrn2_1oszvuo atm_7l_jt7fhx_pfnrn2_1oszvuo atm_70_18bflhl_pfnrn2_1oszvuo atm_rd_8stvzk_pfnrn2 atm_3f_glywfm_1nos8r_uv4tnr atm_26_zbnr2t_1nos8r_uv4tnr atm_7l_177r58q_1nos8r_uv4tnr atm_rd_8stvzk_1nos8r_uv4tnr atm_3f_glywfm_4fughm_uv4tnr atm_26_1j28jx2_4fughm_uv4tnr atm_7l_9vytuy_4fughm_uv4tnr atm_3f_glywfm_csw3t1 atm_26_zbnr2t_csw3t1 atm_7l_177r58q_csw3t1 atm_3f_glywfm_1o5j5ji atm_26_1j28jx2_1o5j5ji atm_7l_9vytuy_1o5j5ji dir dir-ltr">
                                                         <div class="_5kaapu" style="display: flex;">
@@ -61,6 +59,21 @@
                                                             <span style="margin-left: 10px;">Save</span>
                                                         </div>
                                                     </button>
+                                                    <form method="POST" action="/listings/<%=listing._id%>?_method=DELETE" class="delete-form" style="display: inline;">
+                                                        <button
+                                                        data-testid="pdp-save-button-unsaved" type="submit"
+                                                        style="margin-left: 10px;"
+                                                        class="l1ovpqvx atm_1he2i46_1k8pnbi_10saat9 atm_yxpdqi_1pv6nv4_10saat9 atm_1a0hdzc_w1h1e8_10saat9 atm_ywwsz3_1afjdsa_10saat9 atm_1lnvhrj_zhgkwc_10saat9 atm_8i46q5_63ecz1_10saat9 b85v83j atm_9j_tlke0l atm_9s_1o8liyq atm_gi_idpfg4 atm_mk_h2mmj6 atm_r3_1h6ojuz atm_70_5j5alw atm_vy_1wugsn5 atm_tl_1gw4zv3 atm_9j_13gfvf7_1o5j5ji c1xklw0o atm_bx_48h72j atm_cs_9dzvea atm_5j_t09oo2 atm_kd_glywfm atm_uc_1lizyuv atm_r2_1j28jx2 atm_c8_km0zk7 atm_g3_18khvle atm_fr_1m9t47k atm_jb_1yg2gu8 atm_3f_glywfm atm_26_1j28jx2 atm_7l_jt7fhx atm_rd_8stvzk atm_9xn0br_1wugsn5 atm_9tnf0v_1wugsn5 atm_7o60g0_1wugsn5 atm_gz_1bs0ed2 atm_h0_1bs0ed2 atm_l8_ftgil2 atm_uc_glywfm__1rrf6b5 atm_kd_glywfm_1w3cfyq atm_uc_aaiy6o_1w3cfyq atm_3f_glywfm_e4a3ld atm_l8_idpfg4_e4a3ld atm_gi_idpfg4_e4a3ld atm_3f_glywfm_1r4qscq atm_kd_glywfm_6y7yyg atm_uc_glywfm_1w3cfyq_1rrf6b5 atm_kd_glywfm_pfnrn2_1oszvuo atm_uc_aaiy6o_pfnrn2_1oszvuo atm_3f_glywfm_1icshfk_1oszvuo atm_l8_idpfg4_1icshfk_1oszvuo atm_gi_idpfg4_1icshfk_1oszvuo atm_3f_glywfm_b5gff8_1oszvuo atm_kd_glywfm_2by9w9_1oszvuo atm_uc_glywfm_pfnrn2_1o31aam atm_tr_18md41p_csw3t1 atm_k4_kb7nvz_1o5j5ji atm_3f_glywfm_1w3cfyq atm_26_zbnr2t_1w3cfyq atm_7l_jt7fhx_1w3cfyq atm_70_18bflhl_1w3cfyq atm_3f_glywfm_pfnrn2_1oszvuo atm_26_zbnr2t_pfnrn2_1oszvuo atm_7l_jt7fhx_pfnrn2_1oszvuo atm_70_18bflhl_pfnrn2_1oszvuo atm_rd_8stvzk_pfnrn2 atm_3f_glywfm_1nos8r_uv4tnr atm_26_zbnr2t_1nos8r_uv4tnr atm_7l_177r58q_1nos8r_uv4tnr atm_rd_8stvzk_1nos8r_uv4tnr atm_3f_glywfm_4fughm_uv4tnr atm_26_1j28jx2_4fughm_uv4tnr atm_7l_9vytuy_4fughm_uv4tnr atm_3f_glywfm_csw3t1 atm_26_zbnr2t_csw3t1 atm_7l_177r58q_csw3t1 atm_3f_glywfm_1o5j5ji atm_26_1j28jx2_1o5j5ji atm_7l_9vytuy_1o5j5ji dir dir-ltr">
+                                                        <div aria-hidden="true" class="_5kaapu" style="display: flex;">
+                                                            <span class="_14tkmhr">
+                                                                <span class="material-symbols-outlined" style="font-weight: 300; font-size: 20px;">
+                                                                    delete
+                                                                    </span>
+                                                            </span>
+                                                            <span style="margin-left: 10px;">Delete</span>
+                                                        </div>
+                                                        </button>
+                                                    </form>
                                                 </span>
                                                 <!-- </div> -->
                                             </div>
@@ -693,80 +706,7 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="_r2ourjn" aria-labelledby="GuestPicker-book_it-form" tabindex="-1">
-                                                                      <div class="_1evg3eo">
-                                                                        <div class="_1y5b6gl">
-                                                                          <div role="group" class="_1m4zger" aria-labelledby="GuestPicker-book_it-form-adults" aria-describedby="GuestPicker-book_it-form-adults-subtitle">
-                                                                            <div class="_bc4egv">
-                                                                              <div id="GuestPicker-book_it-form-adults" class="_1cli6nf">Adults</div>
-                                                                              <div id="GuestPicker-book_it-form-adults-subtitle" class="_192yjpe">Age 13+</div>
-                                                                            </div>
-                                                                            <div class="_jro6t0">
-                                                                              <div class="caex243 atm_9s_116y0ak atm_h_1h6ojuz atm_fc_1yb4nlp atm_vy_e2f67q atm_e2_1vi7ecw atm_7l_jt7fhx atm_cs_6adqpa atm_c8_2x1prs atm_g3_1jbyh58 atm_fr_11a07z3 atm_bx_48h72j dir dir-ltr" id="GuestPicker-book_it-form-adults-stepper"><button class="bv4zwx4 atm_ax_idpfg4 atm_bb_idpfg4 atm_9j_tlke0l atm_gi_idpfg4 atm_l8_idpfg4 atm_r3_1h6ojuz atm_rd_glywfm atm_3f_97hwo atm_bx_1kw7nm4 atm_tl_1gw4zv3 atm_vy_1vi7ecw atm_e2_1vi7ecw atm_9s_116y0ak atm_h_1h6ojuz atm_fc_1h6ojuz atm_7l_1he744i atm_4b_1en9qhd atm_26_1qwqy05 atm_5j_1ssbidh atm_kd_glywfm atm_9j_13gfvf7_1o5j5ji atm_7l_jt7fhx_1vpy06o_uv4tnr atm_4b_1qnzqti_1vpy06o_uv4tnr atm_26_1qwqy05_1vpy06o_uv4tnr atm_3f_glywfm_jo46a5 atm_l8_idpfg4_jo46a5 atm_gi_idpfg4_jo46a5 atm_3f_glywfm_1icshfk atm_kd_glywfm_19774hq atm_uc_aaiy6o_1w3cfyq atm_7l_jt7fhx_1w3cfyq atm_4b_1qnzqti_1w3cfyq atm_26_1qwqy05_1w3cfyq atm_70_1txm9bj_1w3cfyq atm_uc_glywfm_1w3cfyq_1rrf6b5 atm_uc_aaiy6o_pfnrn2_1oszvuo atm_7l_jt7fhx_pfnrn2_1oszvuo atm_4b_1qnzqti_pfnrn2_1oszvuo atm_26_1qwqy05_pfnrn2_1oszvuo atm_70_1txm9bj_pfnrn2_1oszvuo atm_uc_glywfm_pfnrn2_1o31aam atm_7l_1vvgs7l_1o5j5ji atm_4b_1vvgs7l_1o5j5ji atm_26_1qwqy05_1o5j5ji dir dir-ltr" type="button" disabled="" tabindex="-1" aria-label="subtract" data-testid="GuestPicker-book_it-form-adults-stepper-decrease-button"><span class="i98ho2o atm_e2_qslrf5 atm_vy_qslrf5 atm_l8_14y27yu dir dir-ltr"><svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block; height: 12px; width: 12px; fill: currentcolor;">
-                                                                                      <path d="m.75 6.75h10.5v-1.5h-10.5z"></path>
-                                                                                    </svg></span></button>
-                                                                                <div class="vqatjzs atm_mk_h2mmj6 atm_7l_1kw7nm4 atm_bx_1kw7nm4 atm_c8_1kw7nm4 atm_g3_1kw7nm4 dir dir-ltr"><span aria-hidden="true" data-testid="GuestPicker-book_it-form-adults-stepper-value">1</span><span class="vlastcb atm_fq_idpfg4 atm_3f_idpfg4 atm_7h_hxbz6r atm_7i_ysn8ba atm_e2_t94yts atm_ks_zryt35 atm_l8_idpfg4 atm_mk_stnw88 atm_vv_1q9ccgz atm_vy_t94yts dir dir-ltr" data-testid="GuestPicker-book_it-form-adults-stepper-a11y-value-label">1 adult</span></div><button class="bv4zwx4 atm_ax_idpfg4 atm_bb_idpfg4 atm_9j_tlke0l atm_gi_idpfg4 atm_l8_idpfg4 atm_r3_1h6ojuz atm_rd_glywfm atm_3f_97hwo atm_bx_1kw7nm4 atm_tl_1gw4zv3 atm_vy_1vi7ecw atm_e2_1vi7ecw atm_9s_116y0ak atm_h_1h6ojuz atm_fc_1h6ojuz atm_7l_1he744i atm_4b_1en9qhd atm_26_1qwqy05 atm_5j_1ssbidh atm_kd_glywfm atm_9j_13gfvf7_1o5j5ji atm_7l_jt7fhx_1vpy06o_uv4tnr atm_4b_1qnzqti_1vpy06o_uv4tnr atm_26_1qwqy05_1vpy06o_uv4tnr atm_3f_glywfm_jo46a5 atm_l8_idpfg4_jo46a5 atm_gi_idpfg4_jo46a5 atm_3f_glywfm_1icshfk atm_kd_glywfm_19774hq atm_uc_aaiy6o_1w3cfyq atm_7l_jt7fhx_1w3cfyq atm_4b_1qnzqti_1w3cfyq atm_26_1qwqy05_1w3cfyq atm_70_1txm9bj_1w3cfyq atm_uc_glywfm_1w3cfyq_1rrf6b5 atm_uc_aaiy6o_pfnrn2_1oszvuo atm_7l_jt7fhx_pfnrn2_1oszvuo atm_4b_1qnzqti_pfnrn2_1oszvuo atm_26_1qwqy05_pfnrn2_1oszvuo atm_70_1txm9bj_pfnrn2_1oszvuo atm_uc_glywfm_pfnrn2_1o31aam atm_7l_1vvgs7l_1o5j5ji atm_4b_1vvgs7l_1o5j5ji atm_26_1qwqy05_1o5j5ji dir dir-ltr" type="button" aria-label="add" data-testid="GuestPicker-book_it-form-adults-stepper-increase-button"><span class="i98ho2o atm_e2_qslrf5 atm_vy_qslrf5 atm_l8_14y27yu dir dir-ltr"><svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block; height: 12px; width: 12px; fill: currentcolor;">
-                                                                                      <path d="m6.75.75v4.5h4.5v1.5h-4.5v4.5h-1.5v-4.5h-4.5v-1.5h4.5v-4.5z"></path>
-                                                                                    </svg></span></button>
-                                                                              </div>
-                                                                            </div>
-                                                                          </div>
-                                                                        </div>
-                                                                        <div class="_1estb9n">
-                                                                          <div role="group" class="_1m4zger" aria-labelledby="GuestPicker-book_it-form-children" aria-describedby="GuestPicker-book_it-form-children-subtitle">
-                                                                            <div class="_bc4egv">
-                                                                              <div id="GuestPicker-book_it-form-children" class="_1cli6nf">Children</div>
-                                                                              <div id="GuestPicker-book_it-form-children-subtitle" class="_192yjpe">Ages 2–12</div>
-                                                                            </div>
-                                                                            <div class="_jro6t0">
-                                                                              <div class="caex243 atm_9s_116y0ak atm_h_1h6ojuz atm_fc_1yb4nlp atm_vy_e2f67q atm_e2_1vi7ecw atm_7l_jt7fhx atm_cs_6adqpa atm_c8_2x1prs atm_g3_1jbyh58 atm_fr_11a07z3 atm_bx_48h72j dir dir-ltr" id="GuestPicker-book_it-form-children-stepper"><button class="bv4zwx4 atm_ax_idpfg4 atm_bb_idpfg4 atm_9j_tlke0l atm_gi_idpfg4 atm_l8_idpfg4 atm_r3_1h6ojuz atm_rd_glywfm atm_3f_97hwo atm_bx_1kw7nm4 atm_tl_1gw4zv3 atm_vy_1vi7ecw atm_e2_1vi7ecw atm_9s_116y0ak atm_h_1h6ojuz atm_fc_1h6ojuz atm_7l_1he744i atm_4b_1en9qhd atm_26_1qwqy05 atm_5j_1ssbidh atm_kd_glywfm atm_9j_13gfvf7_1o5j5ji atm_7l_jt7fhx_1vpy06o_uv4tnr atm_4b_1qnzqti_1vpy06o_uv4tnr atm_26_1qwqy05_1vpy06o_uv4tnr atm_3f_glywfm_jo46a5 atm_l8_idpfg4_jo46a5 atm_gi_idpfg4_jo46a5 atm_3f_glywfm_1icshfk atm_kd_glywfm_19774hq atm_uc_aaiy6o_1w3cfyq atm_7l_jt7fhx_1w3cfyq atm_4b_1qnzqti_1w3cfyq atm_26_1qwqy05_1w3cfyq atm_70_1txm9bj_1w3cfyq atm_uc_glywfm_1w3cfyq_1rrf6b5 atm_uc_aaiy6o_pfnrn2_1oszvuo atm_7l_jt7fhx_pfnrn2_1oszvuo atm_4b_1qnzqti_pfnrn2_1oszvuo atm_26_1qwqy05_pfnrn2_1oszvuo atm_70_1txm9bj_pfnrn2_1oszvuo atm_uc_glywfm_pfnrn2_1o31aam atm_7l_1vvgs7l_1o5j5ji atm_4b_1vvgs7l_1o5j5ji atm_26_1qwqy05_1o5j5ji dir dir-ltr" type="button" disabled="" tabindex="-1" aria-label="subtract" data-testid="GuestPicker-book_it-form-children-stepper-decrease-button"><span class="i98ho2o atm_e2_qslrf5 atm_vy_qslrf5 atm_l8_14y27yu dir dir-ltr"><svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block; height: 12px; width: 12px; fill: currentcolor;">
-                                                                                      <path d="m.75 6.75h10.5v-1.5h-10.5z"></path>
-                                                                                    </svg></span></button>
-                                                                                <div class="vqatjzs atm_mk_h2mmj6 atm_7l_1kw7nm4 atm_bx_1kw7nm4 atm_c8_1kw7nm4 atm_g3_1kw7nm4 dir dir-ltr"><span aria-hidden="true" data-testid="GuestPicker-book_it-form-children-stepper-value">0</span><span class="vlastcb atm_fq_idpfg4 atm_3f_idpfg4 atm_7h_hxbz6r atm_7i_ysn8ba atm_e2_t94yts atm_ks_zryt35 atm_l8_idpfg4 atm_mk_stnw88 atm_vv_1q9ccgz atm_vy_t94yts dir dir-ltr" data-testid="GuestPicker-book_it-form-children-stepper-a11y-value-label">0 children</span></div><button class="bv4zwx4 atm_ax_idpfg4 atm_bb_idpfg4 atm_9j_tlke0l atm_gi_idpfg4 atm_l8_idpfg4 atm_r3_1h6ojuz atm_rd_glywfm atm_3f_97hwo atm_bx_1kw7nm4 atm_tl_1gw4zv3 atm_vy_1vi7ecw atm_e2_1vi7ecw atm_9s_116y0ak atm_h_1h6ojuz atm_fc_1h6ojuz atm_7l_1he744i atm_4b_1en9qhd atm_26_1qwqy05 atm_5j_1ssbidh atm_kd_glywfm atm_9j_13gfvf7_1o5j5ji atm_7l_jt7fhx_1vpy06o_uv4tnr atm_4b_1qnzqti_1vpy06o_uv4tnr atm_26_1qwqy05_1vpy06o_uv4tnr atm_3f_glywfm_jo46a5 atm_l8_idpfg4_jo46a5 atm_gi_idpfg4_jo46a5 atm_3f_glywfm_1icshfk atm_kd_glywfm_19774hq atm_uc_aaiy6o_1w3cfyq atm_7l_jt7fhx_1w3cfyq atm_4b_1qnzqti_1w3cfyq atm_26_1qwqy05_1w3cfyq atm_70_1txm9bj_1w3cfyq atm_uc_glywfm_1w3cfyq_1rrf6b5 atm_uc_aaiy6o_pfnrn2_1oszvuo atm_7l_jt7fhx_pfnrn2_1oszvuo atm_4b_1qnzqti_pfnrn2_1oszvuo atm_26_1qwqy05_pfnrn2_1oszvuo atm_70_1txm9bj_pfnrn2_1oszvuo atm_uc_glywfm_pfnrn2_1o31aam atm_7l_1vvgs7l_1o5j5ji atm_4b_1vvgs7l_1o5j5ji atm_26_1qwqy05_1o5j5ji dir dir-ltr" type="button" aria-label="add" data-testid="GuestPicker-book_it-form-children-stepper-increase-button"><span class="i98ho2o atm_e2_qslrf5 atm_vy_qslrf5 atm_l8_14y27yu dir dir-ltr"><svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block; height: 12px; width: 12px; fill: currentcolor;">
-                                                                                      <path d="m6.75.75v4.5h4.5v1.5h-4.5v4.5h-1.5v-4.5h-4.5v-1.5h4.5v-4.5z"></path>
-                                                                                    </svg></span></button>
-                                                                              </div>
-                                                                            </div>
-                                                                          </div>
-                                                                        </div>
-                                                                        <div class="_1estb9n">
-                                                                          <div role="group" class="_1m4zger" aria-labelledby="GuestPicker-book_it-form-infants" aria-describedby="GuestPicker-book_it-form-infants-subtitle">
-                                                                            <div class="_bc4egv">
-                                                                              <div id="GuestPicker-book_it-form-infants" class="_1cli6nf">Infants</div>
-                                                                              <div id="GuestPicker-book_it-form-infants-subtitle" class="_192yjpe">Under 2</div>
-                                                                            </div>
-                                                                            <div class="_jro6t0">
-                                                                              <div class="caex243 atm_9s_116y0ak atm_h_1h6ojuz atm_fc_1yb4nlp atm_vy_e2f67q atm_e2_1vi7ecw atm_7l_jt7fhx atm_cs_6adqpa atm_c8_2x1prs atm_g3_1jbyh58 atm_fr_11a07z3 atm_bx_48h72j dir dir-ltr" id="GuestPicker-book_it-form-infants-stepper"><button class="bv4zwx4 atm_ax_idpfg4 atm_bb_idpfg4 atm_9j_tlke0l atm_gi_idpfg4 atm_l8_idpfg4 atm_r3_1h6ojuz atm_rd_glywfm atm_3f_97hwo atm_bx_1kw7nm4 atm_tl_1gw4zv3 atm_vy_1vi7ecw atm_e2_1vi7ecw atm_9s_116y0ak atm_h_1h6ojuz atm_fc_1h6ojuz atm_7l_1he744i atm_4b_1en9qhd atm_26_1qwqy05 atm_5j_1ssbidh atm_kd_glywfm atm_9j_13gfvf7_1o5j5ji atm_7l_jt7fhx_1vpy06o_uv4tnr atm_4b_1qnzqti_1vpy06o_uv4tnr atm_26_1qwqy05_1vpy06o_uv4tnr atm_3f_glywfm_jo46a5 atm_l8_idpfg4_jo46a5 atm_gi_idpfg4_jo46a5 atm_3f_glywfm_1icshfk atm_kd_glywfm_19774hq atm_uc_aaiy6o_1w3cfyq atm_7l_jt7fhx_1w3cfyq atm_4b_1qnzqti_1w3cfyq atm_26_1qwqy05_1w3cfyq atm_70_1txm9bj_1w3cfyq atm_uc_glywfm_1w3cfyq_1rrf6b5 atm_uc_aaiy6o_pfnrn2_1oszvuo atm_7l_jt7fhx_pfnrn2_1oszvuo atm_4b_1qnzqti_pfnrn2_1oszvuo atm_26_1qwqy05_pfnrn2_1oszvuo atm_70_1txm9bj_pfnrn2_1oszvuo atm_uc_glywfm_pfnrn2_1o31aam atm_7l_1vvgs7l_1o5j5ji atm_4b_1vvgs7l_1o5j5ji atm_26_1qwqy05_1o5j5ji dir dir-ltr" type="button" disabled="" tabindex="-1" aria-label="subtract" data-testid="GuestPicker-book_it-form-infants-stepper-decrease-button"><span class="i98ho2o atm_e2_qslrf5 atm_vy_qslrf5 atm_l8_14y27yu dir dir-ltr"><svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block; height: 12px; width: 12px; fill: currentcolor;">
-                                                                                      <path d="m.75 6.75h10.5v-1.5h-10.5z"></path>
-                                                                                    </svg></span></button>
-                                                                                <div class="vqatjzs atm_mk_h2mmj6 atm_7l_1kw7nm4 atm_bx_1kw7nm4 atm_c8_1kw7nm4 atm_g3_1kw7nm4 dir dir-ltr"><span aria-hidden="true" data-testid="GuestPicker-book_it-form-infants-stepper-value">0</span><span class="vlastcb atm_fq_idpfg4 atm_3f_idpfg4 atm_7h_hxbz6r atm_7i_ysn8ba atm_e2_t94yts atm_ks_zryt35 atm_l8_idpfg4 atm_mk_stnw88 atm_vv_1q9ccgz atm_vy_t94yts dir dir-ltr" data-testid="GuestPicker-book_it-form-infants-stepper-a11y-value-label">0 infants</span></div><button class="bv4zwx4 atm_ax_idpfg4 atm_bb_idpfg4 atm_9j_tlke0l atm_gi_idpfg4 atm_l8_idpfg4 atm_r3_1h6ojuz atm_rd_glywfm atm_3f_97hwo atm_bx_1kw7nm4 atm_tl_1gw4zv3 atm_vy_1vi7ecw atm_e2_1vi7ecw atm_9s_116y0ak atm_h_1h6ojuz atm_fc_1h6ojuz atm_7l_1he744i atm_4b_1en9qhd atm_26_1qwqy05 atm_5j_1ssbidh atm_kd_glywfm atm_9j_13gfvf7_1o5j5ji atm_7l_jt7fhx_1vpy06o_uv4tnr atm_4b_1qnzqti_1vpy06o_uv4tnr atm_26_1qwqy05_1vpy06o_uv4tnr atm_3f_glywfm_jo46a5 atm_l8_idpfg4_jo46a5 atm_gi_idpfg4_jo46a5 atm_3f_glywfm_1icshfk atm_kd_glywfm_19774hq atm_uc_aaiy6o_1w3cfyq atm_7l_jt7fhx_1w3cfyq atm_4b_1qnzqti_1w3cfyq atm_26_1qwqy05_1w3cfyq atm_70_1txm9bj_1w3cfyq atm_uc_glywfm_1w3cfyq_1rrf6b5 atm_uc_aaiy6o_pfnrn2_1oszvuo atm_7l_jt7fhx_pfnrn2_1oszvuo atm_4b_1qnzqti_pfnrn2_1oszvuo atm_26_1qwqy05_pfnrn2_1oszvuo atm_70_1txm9bj_pfnrn2_1oszvuo atm_uc_glywfm_pfnrn2_1o31aam atm_7l_1vvgs7l_1o5j5ji atm_4b_1vvgs7l_1o5j5ji atm_26_1qwqy05_1o5j5ji dir dir-ltr" type="button" aria-label="add" data-testid="GuestPicker-book_it-form-infants-stepper-increase-button"><span class="i98ho2o atm_e2_qslrf5 atm_vy_qslrf5 atm_l8_14y27yu dir dir-ltr"><svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block; height: 12px; width: 12px; fill: currentcolor;">
-                                                                                      <path d="m6.75.75v4.5h4.5v1.5h-4.5v4.5h-1.5v-4.5h-4.5v-1.5h4.5v-4.5z"></path>
-                                                                                    </svg></span></button>
-                                                                              </div>
-                                                                            </div>
-                                                                          </div>
-                                                                        </div>
-                                                                        <div class="_1estb9n">
-                                                                          <div role="group" class="_1m4zger" aria-labelledby="GuestPicker-book_it-form-pets" aria-describedby="GuestPicker-book_it-form-pets-subtitle">
-                                                                            <div class="_bc4egv">
-                                                                              <div id="GuestPicker-book_it-form-pets" class="_1cli6nf">Pets</div>
-                                                                              <div id="GuestPicker-book_it-form-pets-subtitle" class="_192yjpe"><button type="button" class="l1ovpqvx atm_1he2i46_1k8pnbi_10saat9 atm_yxpdqi_1pv6nv4_10saat9 atm_1a0hdzc_w1h1e8_10saat9 atm_ywwsz3_1afjdsa_10saat9 atm_1lnvhrj_zhgkwc_10saat9 atm_8i46q5_63ecz1_10saat9 b1uxatsa atm_c8_1kw7nm4 atm_bx_1kw7nm4 atm_cd_1kw7nm4 atm_ci_1kw7nm4 atm_g3_1kw7nm4 atm_9j_tlke0l_1nos8r_uv4tnr atm_7l_1kw7nm4_pfnrn2 atm_rd_8stvzk_pfnrn2 c1qih7tm atm_1s_glywfm atm_26_1j28jx2 atm_3f_idpfg4 atm_9j_tlke0l atm_gi_idpfg4 atm_l8_idpfg4 atm_vb_1wugsn5 atm_7l_jt7fhx atm_rd_8stvzk atm_5j_1896hn4 atm_cs_9dzvea atm_r3_1kw7nm4 atm_mk_h2mmj6 atm_kd_glywfm atm_9j_13gfvf7_1o5j5ji atm_7l_jt7fhx_v5whe7 atm_rd_8stvzk_v5whe7 atm_7l_177r58q_1nos8r_uv4tnr atm_rd_8stvzk_1nos8r_uv4tnr atm_7l_9vytuy_4fughm_uv4tnr atm_rd_8stvzk_4fughm_uv4tnr atm_rd_8stvzk_xggcrc_uv4tnr atm_7l_1he744i_csw3t1 atm_rd_8stvzk_csw3t1 atm_3f_glywfm_jo46a5 atm_l8_idpfg4_jo46a5 atm_gi_idpfg4_jo46a5 atm_3f_glywfm_1icshfk atm_kd_glywfm_19774hq atm_7l_jt7fhx_1w3cfyq atm_rd_8stvzk_1w3cfyq atm_uc_aaiy6o_1w3cfyq atm_70_1p56tq7_1w3cfyq atm_uc_glywfm_1w3cfyq_1rrf6b5 atm_7l_jt7fhx_pfnrn2_1oszvuo atm_rd_8stvzk_pfnrn2_1oszvuo atm_uc_aaiy6o_pfnrn2_1oszvuo atm_70_1p56tq7_pfnrn2_1oszvuo atm_uc_glywfm_pfnrn2_1o31aam atm_7l_9vytuy_1o5j5ji atm_rd_8stvzk_1o5j5ji atm_rd_8stvzk_1mj13j2 dir dir-ltr">Bringing a service animal?</button></div>
-                                                                            </div>
-                                                                            <div class="_jro6t0">
-                                                                              <div class="caex243 atm_9s_116y0ak atm_h_1h6ojuz atm_fc_1yb4nlp atm_vy_e2f67q atm_e2_1vi7ecw atm_7l_jt7fhx atm_cs_6adqpa atm_c8_2x1prs atm_g3_1jbyh58 atm_fr_11a07z3 atm_bx_48h72j dir dir-ltr" id="GuestPicker-book_it-form-pets-stepper"><button class="bv4zwx4 atm_ax_idpfg4 atm_bb_idpfg4 atm_9j_tlke0l atm_gi_idpfg4 atm_l8_idpfg4 atm_r3_1h6ojuz atm_rd_glywfm atm_3f_97hwo atm_bx_1kw7nm4 atm_tl_1gw4zv3 atm_vy_1vi7ecw atm_e2_1vi7ecw atm_9s_116y0ak atm_h_1h6ojuz atm_fc_1h6ojuz atm_7l_1he744i atm_4b_1en9qhd atm_26_1qwqy05 atm_5j_1ssbidh atm_kd_glywfm atm_9j_13gfvf7_1o5j5ji atm_7l_jt7fhx_1vpy06o_uv4tnr atm_4b_1qnzqti_1vpy06o_uv4tnr atm_26_1qwqy05_1vpy06o_uv4tnr atm_3f_glywfm_jo46a5 atm_l8_idpfg4_jo46a5 atm_gi_idpfg4_jo46a5 atm_3f_glywfm_1icshfk atm_kd_glywfm_19774hq atm_uc_aaiy6o_1w3cfyq atm_7l_jt7fhx_1w3cfyq atm_4b_1qnzqti_1w3cfyq atm_26_1qwqy05_1w3cfyq atm_70_1txm9bj_1w3cfyq atm_uc_glywfm_1w3cfyq_1rrf6b5 atm_uc_aaiy6o_pfnrn2_1oszvuo atm_7l_jt7fhx_pfnrn2_1oszvuo atm_4b_1qnzqti_pfnrn2_1oszvuo atm_26_1qwqy05_pfnrn2_1oszvuo atm_70_1txm9bj_pfnrn2_1oszvuo atm_uc_glywfm_pfnrn2_1o31aam atm_7l_1vvgs7l_1o5j5ji atm_4b_1vvgs7l_1o5j5ji atm_26_1qwqy05_1o5j5ji dir dir-ltr" type="button" disabled="" tabindex="-1" aria-label="subtract" data-testid="GuestPicker-book_it-form-pets-stepper-decrease-button"><span class="i98ho2o atm_e2_qslrf5 atm_vy_qslrf5 atm_l8_14y27yu dir dir-ltr"><svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block; height: 12px; width: 12px; fill: currentcolor;">
-                                                                                      <path d="m.75 6.75h10.5v-1.5h-10.5z"></path>
-                                                                                    </svg></span></button>
-                                                                                <div class="vqatjzs atm_mk_h2mmj6 atm_7l_1kw7nm4 atm_bx_1kw7nm4 atm_c8_1kw7nm4 atm_g3_1kw7nm4 dir dir-ltr"><span aria-hidden="true" data-testid="GuestPicker-book_it-form-pets-stepper-value">0</span><span class="vlastcb atm_fq_idpfg4 atm_3f_idpfg4 atm_7h_hxbz6r atm_7i_ysn8ba atm_e2_t94yts atm_ks_zryt35 atm_l8_idpfg4 atm_mk_stnw88 atm_vv_1q9ccgz atm_vy_t94yts dir dir-ltr" data-testid="GuestPicker-book_it-form-pets-stepper-a11y-value-label">0 pets</span></div><button class="bv4zwx4 atm_ax_idpfg4 atm_bb_idpfg4 atm_9j_tlke0l atm_gi_idpfg4 atm_l8_idpfg4 atm_r3_1h6ojuz atm_rd_glywfm atm_3f_97hwo atm_bx_1kw7nm4 atm_tl_1gw4zv3 atm_vy_1vi7ecw atm_e2_1vi7ecw atm_9s_116y0ak atm_h_1h6ojuz atm_fc_1h6ojuz atm_7l_1he744i atm_4b_1en9qhd atm_26_1qwqy05 atm_5j_1ssbidh atm_kd_glywfm atm_9j_13gfvf7_1o5j5ji atm_7l_jt7fhx_1vpy06o_uv4tnr atm_4b_1qnzqti_1vpy06o_uv4tnr atm_26_1qwqy05_1vpy06o_uv4tnr atm_3f_glywfm_jo46a5 atm_l8_idpfg4_jo46a5 atm_gi_idpfg4_jo46a5 atm_3f_glywfm_1icshfk atm_kd_glywfm_19774hq atm_uc_aaiy6o_1w3cfyq atm_7l_jt7fhx_1w3cfyq atm_4b_1qnzqti_1w3cfyq atm_26_1qwqy05_1w3cfyq atm_70_1txm9bj_1w3cfyq atm_uc_glywfm_1w3cfyq_1rrf6b5 atm_uc_aaiy6o_pfnrn2_1oszvuo atm_7l_jt7fhx_pfnrn2_1oszvuo atm_4b_1qnzqti_pfnrn2_1oszvuo atm_26_1qwqy05_pfnrn2_1oszvuo atm_70_1txm9bj_pfnrn2_1oszvuo atm_uc_glywfm_pfnrn2_1o31aam atm_7l_1vvgs7l_1o5j5ji atm_4b_1vvgs7l_1o5j5ji atm_26_1qwqy05_1o5j5ji dir dir-ltr" type="button" disabled="" tabindex="-1" aria-label="add" data-testid="GuestPicker-book_it-form-pets-stepper-increase-button"><span class="i98ho2o atm_e2_qslrf5 atm_vy_qslrf5 atm_l8_14y27yu dir dir-ltr"><svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block; height: 12px; width: 12px; fill: currentcolor;">
-                                                                                      <path d="m6.75.75v4.5h4.5v1.5h-4.5v4.5h-1.5v-4.5h-4.5v-1.5h4.5v-4.5z"></path>
-                                                                                    </svg></span></button>
-                                                                              </div>
-                                                                            </div>
-                                                                          </div>
-                                                                        </div>
-                                                                        <div class="_2x2gkbi">This place has a maximum of 6 guests, not including infants. Pets aren't allowed.</div>
-                                                                      </div>
-                                                                      <div class="_1jdtwz4"><button type="button" class="l1ovpqvx atm_1he2i46_1k8pnbi_10saat9 atm_yxpdqi_1pv6nv4_10saat9 atm_1a0hdzc_w1h1e8_10saat9 atm_ywwsz3_1afjdsa_10saat9 atm_1lnvhrj_zhgkwc_10saat9 atm_8i46q5_63ecz1_10saat9 be3uexp atm_9j_tlke0l atm_9s_1o8liyq atm_gi_idpfg4 atm_mk_h2mmj6 atm_r3_1h6ojuz atm_70_5j5alw atm_vy_1wugsn5 atm_tl_1gw4zv3 atm_9j_13gfvf7_1o5j5ji c1kqzsh2 atm_bx_48h72j atm_c8_2x1prs atm_g3_1jbyh58 atm_fr_11a07z3 atm_cs_9dzvea atm_5j_t09oo2 atm_kd_glywfm atm_uc_1lizyuv atm_r2_1j28jx2 atm_jb_1fkumsa atm_3f_glywfm atm_26_1j28jx2 atm_7l_jt7fhx atm_rd_8stvzk atm_9xn0br_1wugsn5 atm_9tnf0v_1wugsn5 atm_7o60g0_1wugsn5 atm_gz_14idwd0 atm_h0_14idwd0 atm_l8_19bvopo atm_8w_1t7jgwy atm_uc_glywfm__1rrf6b5 atm_kd_glywfm_1w3cfyq atm_uc_aaiy6o_1w3cfyq atm_3f_glywfm_e4a3ld atm_l8_idpfg4_e4a3ld atm_gi_idpfg4_e4a3ld atm_3f_glywfm_1r4qscq atm_kd_glywfm_6y7yyg atm_uc_glywfm_1w3cfyq_1rrf6b5 atm_kd_glywfm_pfnrn2_1oszvuo atm_uc_aaiy6o_pfnrn2_1oszvuo atm_3f_glywfm_1icshfk_1oszvuo atm_l8_idpfg4_1icshfk_1oszvuo atm_gi_idpfg4_1icshfk_1oszvuo atm_3f_glywfm_b5gff8_1oszvuo atm_kd_glywfm_2by9w9_1oszvuo atm_uc_glywfm_pfnrn2_1o31aam atm_tr_18md41p_csw3t1 atm_k4_kb7nvz_1o5j5ji atm_3f_glywfm_1w3cfyq atm_26_zbnr2t_1w3cfyq atm_7l_jt7fhx_1w3cfyq atm_70_18bflhl_1w3cfyq atm_3f_glywfm_pfnrn2_1oszvuo atm_26_zbnr2t_pfnrn2_1oszvuo atm_7l_jt7fhx_pfnrn2_1oszvuo atm_70_18bflhl_pfnrn2_1oszvuo atm_rd_8stvzk_pfnrn2 atm_3f_glywfm_1nos8r_uv4tnr atm_26_zbnr2t_1nos8r_uv4tnr atm_7l_177r58q_1nos8r_uv4tnr atm_rd_8stvzk_1nos8r_uv4tnr atm_3f_glywfm_4fughm_uv4tnr atm_26_1j28jx2_4fughm_uv4tnr atm_7l_9vytuy_4fughm_uv4tnr atm_3f_glywfm_csw3t1 atm_26_zbnr2t_csw3t1 atm_7l_177r58q_csw3t1 atm_3f_glywfm_1o5j5ji atm_26_1j28jx2_1o5j5ji atm_7l_9vytuy_1o5j5ji dir dir-ltr">Close</button></div>
-                                                                    </div>                                                                    <div class="_fz3zdn">
+                                                                    <div class="_fz3zdn">
                                                                         <div class="dir dir-ltr">
                                                                             <button data-testid="homes-pdp-cta-btn"
                                                                                 type="button"
@@ -785,7 +725,7 @@
                                                                     </div>
                                                                 </div>
                                                                 <div class="_1o0c7xj">
-                                                                    <div class="_qqc9rm">You won't be charged yet</div>
+                                                                    <div class="_qqc9rm" style="text-align: center; margin: 5px;">You won't be charged yet</div>
                                                                 </div>
                                                                 <div class="_1cvivhm">
                                                                     <div class="_m495dq" style="
@@ -812,10 +752,10 @@
                                                                                             <div class="_10d7v0r">
                                                                                                 <button type="button"
                                                                                                     class="_12wl7g09 l1ovpqvx atm_1he2i46_1k8pnbi_10saat9 atm_yxpdqi_1pv6nv4_10saat9 atm_1a0hdzc_w1h1e8_10saat9 atm_ywwsz3_1afjdsa_10saat9 atm_1lnvhrj_zhgkwc_10saat9 atm_8i46q5_63ecz1_10saat9 dir dir-ltr"
-                                                                                                    style="text-align: start;">
+                                                                                                    style="font-size: inherit !important; 	font-family: inherit !important; 	font-style: inherit !important; 	font-variant: inherit !important; 	line-height: inherit !important; 	appearance: none !important; 	background: transparent !important; 	border: 0px !important; 	cursor: pointer !important; 	margin: 0px !important; 	padding: 0px !important; 	user-select: auto !important; 	color: rgb(106, 106, 106) !important; 	text-decoration: underline 1px !important; 	border-radius: 4px !important; 	font-weight: 400 !important; 	outline: none !important;">
                                                                                                     <div
                                                                                                         class="l1x1206l atm_7l_jt7fhx atm_r3_1e5hqsa dir dir-ltr">
-                                                                                                        $530 x 5 nights
+                                                                                                        $<%= listing.price %> x 1 night
                                                                                                     </div>
                                                                                                     <span
                                                                                                         class="a8jt5op atm_3f_idpfg4 atm_7h_hxbz6r atm_7i_ysn8ba atm_e2_t94yts atm_ks_zryt35 atm_l8_idpfg4 atm_mk_stnw88 atm_vv_1q9ccgz atm_vy_t94yts dir dir-ltr">
@@ -826,7 +766,7 @@
                                                                                             </div>
                                                                                         </span>
                                                                                     </span>
-                                                                                    <span class="_1k4xcdh">$2,650</span>
+                                                                                    <span class="_1k4xcdh">$<%= listing.price %></span>
                                                                                 </div>
                                                                                 <div class="_tr4owt">
                                                                                     <span class="_18x3iiu">
@@ -834,7 +774,7 @@
                                                                                             <div class="_10d7v0r">
                                                                                                 <button type="button"
                                                                                                     class="_12wl7g09 l1ovpqvx atm_1he2i46_1k8pnbi_10saat9 atm_yxpdqi_1pv6nv4_10saat9 atm_1a0hdzc_w1h1e8_10saat9 atm_ywwsz3_1afjdsa_10saat9 atm_1lnvhrj_zhgkwc_10saat9 atm_8i46q5_63ecz1_10saat9 dir dir-ltr"
-                                                                                                    style="text-align: start;">
+                                                                                                    style="font-size: inherit !important; 	font-family: inherit !important; 	font-style: inherit !important; 	font-variant: inherit !important; 	line-height: inherit !important; 	appearance: none !important; 	background: transparent !important; 	border: 0px !important; 	cursor: pointer !important; 	margin: 0px !important; 	padding: 0px !important; 	user-select: auto !important; 	color: rgb(106, 106, 106) !important; 	text-decoration: underline 1px !important; 	border-radius: 4px !important; 	font-weight: 400 !important; 	outline: none !important;">
                                                                                                     <div
                                                                                                         class="l1x1206l atm_7l_jt7fhx atm_r3_1e5hqsa dir dir-ltr">
                                                                                                         Cleaning fee
@@ -848,7 +788,7 @@
                                                                                             </div>
                                                                                         </span>
                                                                                     </span>
-                                                                                    <span class="_1k4xcdh">$245</span>
+                                                                                    <span class="_1k4xcdh">$<%= listing.price * 3 %></span>
                                                                                 </div>
                                                                                 <div class="_tr4owt">
                                                                                     <span class="_18x3iiu">
@@ -856,7 +796,7 @@
                                                                                             <div class="_10d7v0r">
                                                                                                 <button type="button"
                                                                                                     class="_12wl7g09 l1ovpqvx atm_1he2i46_1k8pnbi_10saat9 atm_yxpdqi_1pv6nv4_10saat9 atm_1a0hdzc_w1h1e8_10saat9 atm_ywwsz3_1afjdsa_10saat9 atm_1lnvhrj_zhgkwc_10saat9 atm_8i46q5_63ecz1_10saat9 dir dir-ltr"
-                                                                                                    style="text-align: start;">
+                                                                                                    style="font-size: inherit !important; 	font-family: inherit !important; 	font-style: inherit !important; 	font-variant: inherit !important; 	line-height: inherit !important; 	appearance: none !important; 	background: transparent !important; 	border: 0px !important; 	cursor: pointer !important; 	margin: 0px !important; 	padding: 0px !important; 	user-select: auto !important; 	color: rgb(106, 106, 106) !important; 	text-decoration: underline 1px !important; 	border-radius: 4px !important; 	font-weight: 400 !important; 	outline: none !important;">
                                                                                                     <div
                                                                                                         class="l1x1206l atm_7l_jt7fhx atm_r3_1e5hqsa dir dir-ltr">
                                                                                                         Airbnb service
@@ -870,17 +810,20 @@
                                                                                             </div>
                                                                                         </span>
                                                                                     </span>
-                                                                                    <span class="_1k4xcdh">$409</span>
+                                                                                    <span class="_1k4xcdh">$<%= listing.price * 5.5 %></span>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="_1wuq8gie">
                                                                                 <div class="_3u0me7">
                                                                                     <span class="_18x3iiu">
-                                                                                        <div>Total before taxes</div>
+                                                                                        <div style="font-size: 1rem !important;
+                                                                                        line-height: 1.25rem !important;
+                                                                                        color: rgb(34, 34, 34) !important;
+                                                                                        font-weight: 600 !important;">Total before taxes</div>
                                                                                     </span>
                                                                                     <span class="_1qs94rc">
                                                                                         <span aria-hidden="false"><span
-                                                                                                class="_j1kt73">$3,304</span></span>
+                                                                                                class="_j1kt73">$<%= (listing.price) + (listing.price * 3) + (listing.price * 5.5) %></span></span>
                                                                                         <span
                                                                                             class="a8jt5op atm_3f_idpfg4 atm_7h_hxbz6r atm_7i_ysn8ba atm_e2_t94yts atm_ks_zryt35 atm_l8_idpfg4 atm_mk_stnw88 atm_vv_1q9ccgz atm_vy_t94yts dir dir-ltr"></span>
                                                                                     </span>
@@ -1107,7 +1050,7 @@
                                                                     class="vejg51v atm_9s_1txwivl atm_cx_yh40bf atm_h_1h6ojuz dir dir-ltr">
                                                                     <div
                                                                         class="ruujrrq atm_9s_1txwivl atm_ar_vrvcex atm_h_1h6ojuz atm_cx_yh40bf dir dir-ltr">
-                                                                        <%= Math.random().toFixed(0) * 5 %>
+                                                                        <%= (Math.random() * 5) .toFixed(0) %>
                                                                             <svg xmlns="http://www.w3.org/2000/svg"
                                                                                 viewBox="0 0 16 16" aria-hidden="true"
                                                                                 role="presentation" focusable="false"
@@ -1423,6 +1366,7 @@
                                                 </span>
                                             </button>
                                         </div>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -1432,3 +1376,38 @@
             </div>
         </div>
     </div>
+
+    <style>
+        ._tr4owt {
+            -webkit-box-pack: justify !important;
+            font-size: 1rem !important;
+            line-height: 1.25rem !important;
+            color: rgb(34, 34, 34) !important;
+            font-weight: 400 !important;
+            padding-top: 16px !important;
+            display: flex !important;
+            flex-wrap: nowrap !important;
+            justify-content: space-between !important;
+        }
+
+        ._1wuq8gie {
+            font-size: 0.875rem !important;
+            line-height: 1.125rem !important;
+            color: rgb(106, 106, 106) !important;
+            font-weight: 400 !important;
+            border-top: 1px solid rgb(221, 221, 221) !important;
+            margin-top: 24px !important;
+            padding-top: 24px !important;
+        }
+
+        ._3u0me7 {
+            -webkit-box-pack: justify !important;
+            font-size: 1rem !important;
+            line-height: 1.25rem !important;
+            color: rgb(34, 34, 34) !important;
+            font-weight: 600 !important;
+            display: flex !important;
+            flex-wrap: nowrap !important;
+            justify-content: space-between !important;
+        }
+    </style>
