@@ -599,7 +599,7 @@
                                                         </div>
                                                         <div
                                                             class="cm1n1wp atm_vy_1osqo2v atm_e2_12am3vd atm_kd_glywfm atm_9j_tlke0l atm_3f_1vlbu9m atm_5j_kitwna atm_73_usvi9m atm_26_1p8m8iw atm_26_116dmco_1nos8r dir dir-ltr">
-                                                            <button role="link" type="button"
+                                                            <button role="link" type="button" id="sendTwitterButton" onclick="sendTwitter()"
                                                                 class="l1ovpqvx atm_1he2i46_1k8pnbi_10saat9 atm_yxpdqi_1pv6nv4_10saat9 atm_1a0hdzc_w1h1e8_10saat9 atm_ywwsz3_1afjdsa_10saat9 atm_1lnvhrj_zhgkwc_10saat9 atm_8i46q5_63ecz1_10saat9 bbkw4bl atm_9j_tlke0l atm_mk_h2mmj6 atm_70_5j5alw atm_tl_1gw4zv3 atm_9j_13gfvf7_1o5j5ji c1rxa9od atm_fr_11a07z3 atm_uc_1lizyuv atm_r2_1j28jx2 atm_26_1j28jx2 atm_3f_glywfm atm_5j_idpfg4 atm_7l_1kw7nm4 atm_9s_1ulexfb atm_gi_idpfg4 atm_l8_idpfg4 atm_r3_1kw7nm4 atm_rd_glywfm atm_e2_1osqo2v atm_vy_1osqo2v atm_bx_1kw7nm4 atm_c8_1kw7nm4 atm_g3_1kw7nm4 atm_cs_1kw7nm4 atm_kd_glywfm atm_uc_glywfm__1rrf6b5 atm_kd_glywfm_1w3cfyq atm_70_1b8lkes_1w3cfyq atm_3f_glywfm_e4a3ld atm_l8_idpfg4_e4a3ld atm_gi_idpfg4_e4a3ld atm_3f_glywfm_1r4qscq atm_kd_glywfm_6y7yyg atm_kd_glywfm_pfnrn2_1oszvuo atm_70_1b8lkes_pfnrn2_1oszvuo atm_l8_idpfg4_1icshfk_1oszvuo atm_gi_idpfg4_1icshfk_1oszvuo atm_3f_glywfm_b5gff8_1oszvuo atm_kd_glywfm_2by9w9_1oszvuo atm_k4_kb7nvz_1o5j5ji atm_3f_glywfm_jo46a5 atm_l8_idpfg4_jo46a5 atm_gi_idpfg4_jo46a5 atm_3f_glywfm_1icshfk atm_kd_glywfm_19774hq atm_uc_aaiy6o_1w3cfyq atm_uc_glywfm_1w3cfyq_1rrf6b5 atm_uc_aaiy6o_pfnrn2_1oszvuo atm_uc_glywfm_pfnrn2_1o31aam atm_tr_glywfm_csw3t1 dir dir-ltr">
                                                                 <div
                                                                     class="fgxpl5o atm_9s_1txwivl atm_h_1h6ojuz dir dir-ltr">
@@ -751,6 +751,7 @@
                         document.getElementById("sendEmailButton").setAttribute('data-id', listingId)
                         document.getElementById("sendMessengerButton").setAttribute('data-id', listingId)
                         document.getElementById("sendFacebookButton").setAttribute('data-id', listingId)
+                        document.getElementById("sendTwitterButton").setAttribute('data-id', listingId)
 
                         if (listingImage) {
                             listingImage.src = listing.image.url;
@@ -854,6 +855,18 @@
                     }
                 }
 
+                function sendTwitter() {
+                    const sendTwitterButton = document.getElementById("sendTwitterButton");
+                    const listingId = sendTwitterButton.getAttribute('data-id');
+                    const listingUrl = `${window.location.origin}/listings/${listingId}`;
+                    const tweetText = `Check out this listing! ${listingUrl}`;
+
+                    // Log the URL to check if it's correct
+                    console.log(`Twitter Share URL: https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}`);
+
+                    // Open the Twitter share dialog
+                    window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}`, '_blank');
+                }
 
             </script>
         </div>
