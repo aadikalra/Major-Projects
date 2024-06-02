@@ -18,13 +18,13 @@ module.exports.index = async (req, res) => {
   // ])
 
   const allListings = await Listing.find({}).sort(sortQuery)
-  console.log(req.user);
+  console.log(req.user)
   res.render('listings/index', {
     allListings,
     sortOption,
     categoryData,
     user: req.user // Pass user to the template
-  });
+  })
 
   console.log(req.user)
 }
@@ -68,11 +68,13 @@ module.exports.showListing = wrapAsync(async (req, res) => {
       )
       return res.redirect('/listings')
     } else {
-      console.log(averageRating);
-      res.render(
-        'listings/show.ejs',
-        { listing, averageRating: { $avg: '$rating' }, categoryData, user: req.user }
-      )
+      console.log(averageRating)
+      res.render('listings/show.ejs', {
+        listing,
+        averageRating: { $avg: '$rating' },
+        categoryData,
+        user: req.user
+      })
     }
   } catch (err) {
     console.error(err)
@@ -119,23 +121,22 @@ module.exports.renderEditForm = async (req, res) => {
 }
 
 module.exports.updateListings = async (req, res) => {
-  const { id } = req.params;
+  const { id } = req.params
 
-  let listing = await Listing.findById(id);
+  let listing = await Listing.findById(id)
 
-  listing = await Listing.findByIdAndUpdate(id, { ...req.body.listing });
+  listing = await Listing.findByIdAndUpdate(id, { ...req.body.listing })
 
   if (req.file) {
-    let url = req.file.path;
-    let filename = req.file.filename;
-    listing.image = { url, filename };
-    await listing.save();
+    let url = req.file.path
+    let filename = req.file.filename
+    listing.image = { url, filename }
+    await listing.save()
   }
 
-  req.flash('success', 'Listing Updated');
-  res.redirect(`/listings/${id}`);
-};
-
+  req.flash('success', 'Listing Updated')
+  res.redirect(`/listings/${id}`)
+}
 
 module.exports.destroyListing = async (req, res) => {
   let { id } = req.params
