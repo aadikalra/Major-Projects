@@ -21,6 +21,7 @@ const User = require('./models/user.js')
 const cookieParser = require('cookie-parser')
 const logger = require('morgan')
 const { isLoggedIn } = require('./middleware.js')
+const categoryData = require('./init/categoryData.js')
 
 // =======================
 // Routers
@@ -138,7 +139,7 @@ app.use('/listings', listingRouter)
 app.use('/', authRouter)
 
 app.get('/', (req, res) => {
-  res.send('This is root')
+  res.render('listings/index.ejs', { categoryData })
 })
 
 // API route for JSON data
